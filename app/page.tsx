@@ -4,16 +4,20 @@ import FeaturedLighters from "./components/FeaturedLighters";
 import Customization from "./components/Customization";
 import WhyOldenfyre from "./components/WhyOldenfyre";
 import CallToAction from "./components/CallToAction";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white overflow-x-hidden">
-      <Hero />
-      <BrandStory />
-      <FeaturedLighters />
-      <Customization />
-      <WhyOldenfyre />
-      <CallToAction />
-    </main>
+    <BackgroundBeamsWithCollision>
+      <main className="min-h-screen w-full bg-black text-white overflow-x-hidden">
+        lorem400
+        {/* <Hero />
+        <BrandStory />
+        <FeaturedLighters />
+        <Customization />
+        <WhyOldenfyre />
+        <CallToAction /> */}
+      </main>
+    </BackgroundBeamsWithCollision>
   );
 }
