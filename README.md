@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oldenfyre - Premium Vintage-Style Lighters
+
+A luxury brand website for handcrafted vintage-style lighters with laser-engraved designs and 3D aesthetics.
+
+## Tech Stack
+
+- **Framework**: Next.js 16.1.1 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Animations**: GSAP with ScrollTrigger, Framer Motion
+- **Build Tool**: Turbopack
+
+## Features
+
+### Design & UX
+
+- Dark, moody luxury theme with black, charcoal, burnt orange, and metallic gold accents
+- Vintage + modern fusion aesthetic
+- Smooth scroll experience with parallax effects
+- Premium spacing and large typography
+- Subtle grain/texture overlays
+
+### Animations
+
+- **GSAP + ScrollTrigger**: Page load animations, scroll reveals, parallax effects
+- **Framer Motion**: Hover effects, button interactions, card micro-interactions
+- Performance-optimized with reduced motion support
+
+### Page Sections
+
+1. **Hero Section**: Full viewport height with animated flame/glow accent and CTA buttons
+2. **Brand Story**: Emotional storytelling with scroll-triggered animations
+3. **Featured Lighters**: Grid layout with hover animations and metallic shine effects
+4. **Customization Highlight**: Showcase of personalization options with parallax
+5. **Why Oldenfyre**: Premium feature cards with animated reveals
+6. **Call To Action**: Strong emotional closing with flame-inspired animations
+
+## Project Structure
+
+```
+app/
+├── components/
+│   ├── Hero.tsx              # Hero section with GSAP animations
+│   ├── BrandStory.tsx        # Brand story with scroll triggers
+│   ├── FeaturedLighters.tsx   # Product grid with Framer Motion
+│   ├── Customization.tsx      # Customization showcase
+│   ├── WhyOldenfyre.tsx      # Feature cards
+│   └── CallToAction.tsx      # Final CTA section
+├── globals.css               # Custom styles and theme variables
+├── layout.tsx               # Root layout with metadata
+└── page.tsx                 # Main page assembling all sections
+```
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## Key Implementation Details
 
-To learn more about Next.js, take a look at the following resources:
+### Color Palette
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Background: `#0a0a0a` (near black)
+- Charcoal: `#1a1a1a`, `#2a2a2a`
+- Accent: `#ff6b35` (burnt orange), `#ff8c5a` (lighter orange)
+- Gold: `#d4af37`, `#f4e5c2`
+- Text: `#fafafa` (primary), `#a0a0a0` (secondary)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Animation Performance
 
-## Deploy on Vercel
+- GPU acceleration for smooth animations
+- Reduced motion support for accessibility
+- Optimized ScrollTrigger implementations
+- Proper cleanup with GSAP context
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Responsive Design
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Mobile-first approach
+- Adaptive layouts for all screen sizes
+- Touch-friendly interactions
+
+## License
+
+This project is proprietary to Oldenfyre.
